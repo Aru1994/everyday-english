@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+}
+.grovalNavigation{
+    height: 70px;
+    background-color: skyblue;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    display: flex;
+}
+.grovalNavigation h3 {
+  margin: 0;
+  font-family: arial;
+  padding:3px 0 0 10px;
+}
+.b_content {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+.b_content li {
+    margin-right: 15px;
+}
+.link_b {
+  font-size: 30px;
+  color: white;
+  display: table-cell;
+  width: inherit;
+  margin-right: 5px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.link_b:hover {
+  color: yellow;
+  text-decoration: none;
+}
+.link_b {
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+.link_b::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: yellow;
+  content: "";
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.link_b:hover::after {
+  width: 100%;
+}
+main{
+    height: auto;
+}
+.u-clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.banner {
+  height: 560px;
+  width: 100%;
+}
+.middleBox {
+  background-color: #e3feff;
+}
+.middleBox h2 {
+  padding-top:50px;
+  text-align: center;
+}
+@media (max-width:670px) {
+  .banner {
+    height: 300px;
+  }
+ .middleBox {
+    width: 100%;
+ }
+}
+.imgBox {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.imgBox ul {
+  list-style: none;
+  padding: 0;
+}
+.imgList {
+  background-color: lightblue;
+  width: 500px;
+  height: 300px;
+  margin-top: 20px;
+}
+footer {
+  height: 120px;
+  width: 100%;
+  background-color: skyblue;
+  padding-top: 15px;
+}
+footer p {
+  text-align: center;
+
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
+footer ul li {
+  margin-right: 5px;
+}
+.instagramlogo {
+  height: 48px;
+  width: 47px;
+}
+.facebooklogo {
+  border-radius: 8px;
+}
+@media (max-width:1000px) {
+  footer ul {
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+  }
+}
