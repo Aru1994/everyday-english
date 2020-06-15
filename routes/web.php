@@ -21,6 +21,8 @@ Route::get('/top', 'TopController@index');
 Auth::routes();
 
 Route::get('/mypage', 'MypageController@index');
-Auth::routes();
+
+Route::get('/question', 'QuestionController@index');
+
 
 Route::get('/home', 'HomeController@index')->name('home');

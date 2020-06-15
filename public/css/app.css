@@ -10928,25 +10928,6 @@ a.text-dark:focus {
   }
 }
 
-body {
-  margin: 0;
-}
-
-.grovalNavigation {
-  height: 70px;
-  background-color: skyblue;
-  color: #fff;
-  position: fixed;
-  width: 100%;
-  display: flex;
-}
-
-.grovalNavigation h3 {
-  margin: 0;
-  font-family: arial;
-  padding: 3px 0 0 10px;
-}
-
 .b_content {
   margin-top: 15px;
   width: 100%;
@@ -11085,5 +11066,440 @@ footer ul li {
     justify-content: center;
     margin-right: 40px;
   }
+}
+
+body {
+  margin: 0;
+}
+
+/* ヘッダーを常に一番上に置いとくid */
+
+.logout:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+.logout {
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+  color: white;
+  text-decoration: none;
+}
+
+.logout::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: yellow;
+  content: "";
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+
+.logout:hover::after {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 150px;
+}
+
+.p-main {
+  display: flex;
+}
+
+main h1 {
+  font-size: 80px;
+  font-family: arial;
+  text-align: center;
+  padding: 140px 0 70px 0;
+  background-color: lightblue;
+  color: #fff;
+  -webkit-text-stroke: 3px skyblue;
+  font-weight: bold;
+}
+
+/* メディアクエリ（@media） */
+
+@media (max-width: 670px) {
+  main h1 {
+    font-size: 50px;
+  }
+
+  .mainList {
+    margin-top: 0;
+    display: inline-block;
+  }
+
+  .p-main {
+    display: block;
+  }
+}
+
+.mainList {
+  margin-top: 130px;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  width: 60%;
+  padding: 0;
+}
+
+.mainList li {
+  margin-left: 7%;
+  margin-bottom: 20px;
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.btn-sticky {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #f7f7f7;
+  border-left: solid 6px navy;
+  /*左線*/
+  color: navy;
+  /*文字色*/
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+}
+
+.btn-sticky:hover {
+  text-decoration: none;
+}
+
+.btn-sticky:active {
+  box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+  transform: translateY(2px);
+}
+
+.mainList li:nth-child(3n) {
+  margin-right: 48px;
+}
+
+.modal-title {
+  font-family: serif;
+}
+
+.modal-body {
+  margin: 60px 50px;
+  text-align: center;
+}
+
+.btn-square-little-rich {
+  font-size: 30px;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #FFF;
+  background: #03A9F4;
+  /*色*/
+  border: solid 1px #0f9ada;
+  /*線色*/
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-square-little-rich:hover {
+  text-decoration: none;
+}
+
+.btn-square-little-rich:active {
+  /*押したとき*/
+  border: solid 1px #03A9F4;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+/* .c-mainMenu {
+  width: 250px;
+  display: inline-block;
+  margin-top: 100px;
+} */
+
+/* ボタンのレイアウト変更予定 */
+
+/* 変更したボタンデザイン */
+
+a.btn-radius-solid {
+  margin-top: 15px;
+  background: #f1e767;
+  background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
+}
+
+a.btn-radius-solid:hover {
+  background: linear-gradient(to top, #f1e767 0%, #feb645 100%);
+}
+
+.c-mainMenu {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.question {
+  height: 300px;
+  width: 450px;
+  border: solid 2px #EC407A;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 30px;
+  padding-top: 50px;
+  display: inline-block;
+}
+
+.question p {
+  font-size: 20px;
+  font-family: serif;
+  color: #EC407A;
+}
+
+.labelText {
+  font-family: serif;
+  color: #EC407A;
+}
+
+.textContent {
+  margin-left: 75px;
+}
+
+.formSquare {
+  border: 2px solid #EC407A;
+  border-radius: 3px;
+  color: #EC407A;
+}
+
+.textSubmit {
+  font-family: serif;
+  margin-left: 230px;
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+  text-align: center;
+  text-decoration: none;
+  color: #EC407A;
+  background-color: #fff;
+  border: 2px solid #EC407A;
+  border-radius: 3px;
+  transition: 0.4s;
+}
+
+.textSubmit:hover {
+  background: #EC407A;
+  color: #fff;
+}
+
+@media (max-width: 670px) {
+  .c-mainMenu {
+    margin: 20px auto;
+  }
+
+  .question {
+    width: 70%;
+    margin: 100px auto;
+  }
+
+  .question p {
+    margin-left: 0;
+  }
+}
+
+/* カレンダー */
+
+.calender {
+  width: 450px;
+  height: 350px;
+  margin-left: 30px;
+  display: inline-block;
+}
+
+.calender p {
+  font-size: 25px;
+  color: gray;
+}
+
+.week {
+  width: 270px;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.date {
+  font-size: 20px;
+  color: gray;
+  margin-right: 30px;
+}
+
+.week :first-child {
+  margin-left: 17px;
+}
+
+.month {
+  height: 270px;
+  width: 30px;
+  color: gray;
+  display: inline-block;
+}
+
+.calenderContents {
+  width: 350px;
+  height: 270px;
+  margin-left: 30px;
+}
+
+.day {
+  width: 40px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.low-level {
+  color: gray;
+  display: inline-block;
+}
+
+.never {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.afew {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffcc;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.normal {
+  width: 30px;
+  height: 30px;
+  background-color: #ffff66;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.much {
+  width: 30px;
+  height: 30px;
+  background-color: #ffff33;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.veryMuch {
+  width: 30px;
+  height: 30px;
+  background-color: #ffff00;
+  border: 1px solid #f2f2f2;
+  border-radius: 6px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.high-level {
+  color: gray;
+  display: inline-block;
+}
+
+/* フッター */
+
+footer {
+  height: 120px;
+  width: 100%;
+  background-color: skyblue;
+  padding-top: 15px;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+footer ul li {
+  margin-right: 5px;
+}
+
+.instagramlogo {
+  height: 48px;
+  width: 47px;
+}
+
+.facebooklogo {
+  border-radius: 8px;
+}
+
+@media (max-width: 1000px) {
+  footer ul {
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+  }
+}
+
+.input {
+  margin: 20px 0;
+}
+
+.m-question {
+  width: 100%;
+}
+
+.c-question {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.m-answer {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.m-example {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.c-example {
+  width: 300px;
+  padding: 15px;
+  border: solid 1px black;
+  border-radius: 10px;
+  display: inline-block;
+  margin-left: 20px;
 }
 
