@@ -3,7 +3,7 @@
 @section('content')
 
 <main>
-    <h1 class="input">インプット型式問題</h1>
+    <div class="input">インプット型式問題</div>
 
     <div class="m-question">
         <div class="c-question">1. stay away (from)仮</div>
@@ -28,7 +28,7 @@
     </div>
 </main>
 <footer>
-    <p>Aru's Portfolio</p>
+    <p>&copy Aru's Portfolio</p>
     <ul>
       <li><img class="facebooklogo" src="{{ asset('images/facebooklogo.png') }}" alt="facebook"></li>
       <li><img class="instagramlogo" src="{{ asset('images/instagram.png') }}" alt="instagram"></li>

@@ -66,7 +66,7 @@ main {
   padding-bottom: 150px;
 }
 .p-main {
-  display: flex;
+//   display: flex;
 }
 main h1 {
   font-size: 80px;
@@ -84,25 +84,32 @@ main h1 {
     font-size: 50px;
   }
   .mainList {
-    margin-top: 0;
-    display: inline-block;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
   .p-main {
     display: block;
+    margin: auto;
+  }
+}
+@media (max-width:1000px) {
+  .mainList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 .mainList {
-  margin-top: 130px;
+  margin: 130px auto;
   list-style: none;
-  display: inline-block;
-  vertical-align: top;
   width: 60%;
   padding: 0;
 }
 .mainList li {
-  margin-left: 7%;
+  width: 200px;
+  margin-left: 30px;
   margin-bottom: 20px;
-  vertical-align: baseline;
   display: inline-block;
 }
 .btn-sticky {
@@ -120,9 +127,6 @@ main h1 {
 .btn-sticky:active {
   box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
   transform: translateY(2px);
-}
-.mainList li:nth-child(3n) {
-  margin-right: 48px;
 }
 .modal-title {
   font-family: serif;
@@ -153,34 +157,6 @@ main h1 {
   box-shadow: none;
   text-shadow: none;
 }
-/* .c-mainMenu {
-  width: 250px;
-  display: inline-block;
-  margin-top: 100px;
-} */
-/* ボタンのレイアウト変更予定 */
-
-/* 変更したボタンデザイン */
-
-a.btn-radius-solid {
-  margin-top: 15px;
-  background: #f1e767;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1e767), to(#feb645));
-  background: -webkit-linear-gradient(top, #f1e767 0%, #feb645 100%);
-  background: linear-gradient(to bottom, #f1e767 0%, #feb645 100%);
-}
-
-a.btn-radius-solid:hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1e767), to(#feb645));
-  background: -webkit-linear-gradient(bottom, #f1e767 0%, #feb645 100%);
-  background: linear-gradient(to top, #f1e767 0%, #feb645 100%);
-}
-.c-mainMenu {
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-}
 
 .question {
   height: 300px;
@@ -188,10 +164,9 @@ a.btn-radius-solid:hover {
   border: solid 2px #EC407A;
   border-radius: 50px;
   text-align: center;
-  margin-top: 100px;
   margin-left: 30px;
   padding-top: 50px;
-  display: inline-block;
+  vertical-align: top;
 }
 .question p {
   font-size: 20px;
@@ -244,7 +219,6 @@ a.btn-radius-solid:hover {
   width: 450px;
   height: 350px;
   margin-left: 30px;
-  display: inline-block;
 }
 .calender p {
   font-size: 25px;
@@ -265,14 +239,11 @@ a.btn-radius-solid:hover {
   margin-left: 17px;
 }
 .month {
-  height: 270px;
-  width: 30px;
   color: gray;
-  display: inline-block;
 }
 .calenderContents {
   width: 350px ;
-  height: 270px;
+  height: 240px;
   margin-left: 30px;
 }
 .day {
@@ -336,6 +307,19 @@ a.btn-radius-solid:hover {
 .high-level {
   color: gray;
   display: inline-block;
+}
+.main-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width:670px) {
+  .main-bottom {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
 }
 
 /* フッター */

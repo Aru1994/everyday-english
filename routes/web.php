@@ -22,7 +22,18 @@ Auth::routes();
 
 Route::get('/mypage', 'MypageController@index');
 
-Route::get('/question', 'QuestionController@index');
+Route::get('/inputquestion', 'InputquestionController@index');
 
+Route::get('/outputquestion', 'OutputquestionController@index');
+
+Route::get('/conversationquestion', 'ConversationquestionController@index');
+
+Route::get('/totalquestion', 'TotalquestionController@index');
+
+Route::get('/outputresult', 'OutputresultController@index');
+
+Route::get('/conversationresult', 'ConversationresultController@index');
+
+Route::get('/totalresult', 'TotalresultController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
