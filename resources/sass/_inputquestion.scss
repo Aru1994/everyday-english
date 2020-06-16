@@ -1,4 +1,6 @@
 .input {
+    font-size: 25px;
+    color: gray;
     margin: 20px 0;
 }
 
@@ -29,4 +31,26 @@
     border-radius: 10px;
     display: inline-block;
     margin-left: 20px;
+    position: relative;
+}
+.next {
+    font-size: 15px;
+    color: gray !important;
+    padding: 10px 15px;
+    border: solid 1px lightblue;
+    border-radius: 8px;    
+    background-color: lightblue;
+    position: absolute;
+    right: 40px;
+    bottom: 60px;
+}
+.next:hover {
+    cursor: pointer;
+    color: cornsilk !important;
+}
+@media (max-width:670px) {
+    .next {
+        position: absolute;
+        bottom: 30px;
+    }
 }

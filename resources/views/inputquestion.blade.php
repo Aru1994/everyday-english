@@ -25,6 +25,7 @@
                 <p class="ja-answer">私は彼に近寄らないです。</p>
             </div>
         </div>
+        <a class="next">次へ</a>
     </div>
 </main>
 <footer>
