@@ -10928,57 +10928,9 @@ a.text-dark:focus {
   }
 }
 
-.b_content {
-  margin-top: 15px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-}
-
-.b_content li {
-  margin-right: 15px;
-}
-
-.link_b {
-  font-size: 30px;
-  color: white;
-  display: table-cell;
-  width: inherit;
-  margin-right: 5px;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-
-.link_b:hover {
-  color: yellow;
-  text-decoration: none;
-}
-
-.link_b {
-  display: inline-block;
-  position: relative;
-  transition: 0.3s;
-}
-
-.link_b::after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background: yellow;
-  content: "";
-  transition: 0.3s;
-  transform: translateX(-50%);
-}
-
-.link_b:hover::after {
-  width: 100%;
-}
-
 main {
   height: auto;
+  padding-bottom: 0 !important;
 }
 
 .u-clearfix::after {
@@ -11023,10 +10975,15 @@ main {
 }
 
 .imgList {
-  background-color: lightblue;
   width: 500px;
   height: 300px;
   margin-top: 20px;
+}
+
+.images {
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
 }
 
 footer {
@@ -11155,7 +11112,7 @@ main h1 {
 }
 
 .mainList li {
-  width: 180px;
+  width: 200px;
   margin-left: 30px;
   margin-bottom: 20px;
   display: inline-block;
@@ -11451,7 +11408,7 @@ footer ul li {
 .input {
   font-size: 25px;
   color: gray;
-  margin: 20px 0;
+  margin-left: 30px;
 }
 
 .m-question {
@@ -11637,6 +11594,10 @@ footer ul li {
   margin-left: 30px;
 }
 
+.ml-3 {
+  margin-top: 50px;
+}
+
 .conversation {
   font-size: 25px;
   color: gray;
@@ -11650,6 +11611,10 @@ footer ul li {
   display: inline-block;
 }
 
+.ml-3 {
+  margin-top: 50px;
+}
+
 .total {
   font-size: 25px;
   color: gray;
@@ -11661,5 +11626,9 @@ footer ul li {
   height: 12px;
   background-color: lightgray;
   display: inline-block;
+}
+
+.ml-3 {
+  margin-top: 50px;
 }
 

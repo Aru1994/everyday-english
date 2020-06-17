@@ -1,63 +1,6 @@
-// body{
-//     margin: 0;
-// }
-// .grovalNavigation{
-//     height: 70px;
-//     background-color: skyblue;
-//     color: #fff;
-//     position: fixed;
-//     width: 100%;
-//     display: flex;
-// }
-// .grovalNavigation h3 {
-//   margin: 0;
-//   font-family: arial;
-//   padding:3px 0 0 10px;
-// }
-.b_content {
-  margin-top: 15px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-}
-.b_content li {
-    margin-right: 15px;
-}
-.link_b {
-  font-size: 30px;
-  color: white;
-  display: table-cell;
-  width: inherit;
-  margin-right: 5px;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-.link_b:hover {
-  color: yellow;
-  text-decoration: none;
-}
-.link_b {
-  display: inline-block;
-  position: relative;
-  transition: 0.3s;
-}
-.link_b::after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background: yellow;
-  content: "";
-  transition: 0.3s;
-  transform: translateX(-50%);
-}
-.link_b:hover::after {
-  width: 100%;
-}
 main{
     height: auto;
+    padding-bottom: 0 !important;
 }
 .u-clearfix::after {
   content: "";
@@ -93,10 +36,14 @@ main{
   padding: 0;
 }
 .imgList {
-  background-color: lightblue;
   width: 500px;
   height: 300px;
   margin-top: 20px;
+}
+.images {
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
 }
 footer {
   height: 120px;
