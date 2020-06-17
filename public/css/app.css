@@ -11155,7 +11155,7 @@ main h1 {
 }
 
 .mainList li {
-  width: 200px;
+  width: 180px;
   margin-left: 30px;
   margin-bottom: 20px;
   display: inline-block;
@@ -11610,6 +11610,25 @@ footer ul li {
   width: 300px;
   font-size: 20px;
   margin-top: 20px;
+}
+
+.idiomList {
+  font-size: 20px;
+  color: dimgrey;
+  margin-top: 30px;
+}
+
+.conversationList {
+  font-size: 20px;
+  color: dimgrey;
+  margin-top: 60px;
+}
+
+.space {
+  width: 200px !important;
+  background-color: lightgray;
+  display: inline-block;
+  padding-bottom: 20px;
 }
 
 .output {

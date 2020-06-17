@@ -30,6 +30,8 @@ Route::get('/conversationquestion', 'ConversationquestionController@index');
 
 Route::get('/totalquestion', 'TotalquestionController@index');
 
+Route::get('/weaklist', 'WeaklistController@index');
+
 Route::get('/outputresult', 'OutputresultController@index');
 
 Route::get('/conversationresult', 'ConversationresultController@index');
