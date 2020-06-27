@@ -2,8 +2,8 @@
     margin: 20px 0;
 }
 
-.container {
-    width: 100%;
+.m-question {
+    width: 60%;
     margin: 0 auto;
 }
 
@@ -11,20 +11,31 @@
     width: 150px;
     height: 30px;
     background-color: lightgray;
-    margin: 10px 0 0 7px;
+    margin: 10px 5px 0 7px;
 }
-.c-question {
+.b-question {
     font-size: 30px;
-    margin-top: 0;
+    display: flex;
+    text-align: left;
 }
 .select-answer {
-    width: 600px;
+    width: 60%;
     margin: 30px auto;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 10%;
 }
 .selection {
-    width: 300px;
+    width: 50%;
     font-size: 20px;
     margin-top: 20px;
+}
+.selection a:hover {
+    color: cornflowerblue;
+    cursor: pointer;
+}
+.selection button {
+    border: none;
+    color: cornflowerblue;
+    outline: none;
 }

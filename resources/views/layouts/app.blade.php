@@ -72,9 +72,17 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
+        <footer>
+            <p>&copy Aru's Portfolio</p>
+            <ul>
+            <li><img class="facebooklogo" src="{{ asset('images/facebooklogo.png') }}" alt="facebook"></li>
+            <li><img class="instagramlogo" src="{{ asset('images/instagram.png') }}" alt="instagram"></li>
+            </ul>
+        </footer>
+
     </div>
 </body>
 </html>

@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TopController@index');
 
 Route::get('/top', 'TopController@index');
 Auth::routes();
@@ -26,6 +24,8 @@ Route::get('/inputquestion', 'InputquestionController@index');
 
 Route::get('/outputquestion', 'OutputquestionController@index');
 
+Route::get('/wordquestion', 'WordquestionController@index');
+
 Route::get('/conversationquestion', 'ConversationquestionController@index');
 
 Route::get('/totalquestion', 'TotalquestionController@index');
@@ -34,8 +34,12 @@ Route::get('/weaklist', 'WeaklistController@index');
 
 Route::get('/outputresult', 'OutputresultController@index');
 
+Route::get('/wordresult', 'WordresultController@index');
+
 Route::get('/conversationresult', 'ConversationresultController@index');
 
 Route::get('/totalresult', 'TotalresultController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/conversationquestion/answer', 'ConversationquestionController@store');
+
+Route::get('/home', 'MypageController@index')->name('home');

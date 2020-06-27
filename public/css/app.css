@@ -10928,11 +10928,6 @@ a.text-dark:focus {
   }
 }
 
-main {
-  height: auto;
-  padding-bottom: 0 !important;
-}
-
 .u-clearfix::after {
   content: "";
   display: block;
@@ -10946,6 +10941,7 @@ main {
 
 .middleBox {
   background-color: #e3feff;
+  padding-bottom: 100px;
 }
 
 .middleBox h2 {
@@ -11029,8 +11025,6 @@ body {
   margin: 0;
 }
 
-/* ヘッダーを常に一番上に置いとくid */
-
 .logout:hover {
   color: yellow;
   text-decoration: none;
@@ -11058,12 +11052,6 @@ body {
 
 .logout:hover::after {
   width: 100%;
-}
-
-main {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 150px;
 }
 
 main h1 {
@@ -11442,7 +11430,6 @@ footer ul li {
   border-radius: 10px;
   display: inline-block;
   margin-left: 20px;
-  position: relative;
 }
 
 .next {
@@ -11452,9 +11439,6 @@ footer ul li {
   border: solid 1px lightblue;
   border-radius: 8px;
   background-color: lightblue;
-  position: absolute;
-  right: 40px;
-  bottom: 60px;
 }
 
 .next:hover {
@@ -11478,9 +11462,18 @@ footer ul li {
   margin: 0 auto;
 }
 
+.output {
+  margin: 20px 0;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .c-question {
   font-size: 30px;
-  margin-top: 100px;
+  margin-top: 100px !important;
 }
 
 .select-answer {
@@ -11505,8 +11498,8 @@ footer ul li {
   margin: 20px 0;
 }
 
-.container {
-  width: 100%;
+.m-question {
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -11514,65 +11507,54 @@ footer ul li {
   width: 150px;
   height: 30px;
   background-color: lightgray;
-  margin: 10px 0 0 7px;
+  margin: 10px 5px 0 7px;
 }
 
-.c-question {
+.b-question {
   font-size: 30px;
-  margin-top: 0;
+  display: flex;
+  text-align: left;
 }
 
 .select-answer {
-  width: 600px;
+  width: 60%;
   margin: 30px auto;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 10%;
 }
 
 .selection {
-  width: 300px;
+  width: 50%;
   font-size: 20px;
   margin-top: 20px;
+}
+
+.selection a:hover {
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.selection button {
+  border: none;
+  color: cornflowerblue;
+  outline: none;
 }
 
 .total {
   margin: 20px 0;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .q-space {
   width: 150px;
   height: 30px;
   background-color: lightgray;
-  margin: 10px 0 0 7px;
+  margin: 10px 5px 0 7px;
 }
 
-.c-question {
-  font-size: 30px;
-  margin-top: 0;
-}
-
-.select-answer {
-  width: 600px;
-  margin: 30px auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.selection {
-  width: 300px;
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-.idiomList {
-  font-size: 20px;
-  color: dimgrey;
-  margin-top: 30px;
+.m-question {
+  width: 60%;
+  margin: 0 auto;
 }
 
 .conversationList {
@@ -11596,6 +11578,12 @@ footer ul li {
 
 .ml-3 {
   margin-top: 50px;
+}
+
+.result {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 10%;
 }
 
 .conversation {

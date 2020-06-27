@@ -2,7 +2,7 @@
 
 @section('content')
 <main>
-    <div class="output">アウトプット型式問題</div>
+    <div class="output">単語問題</div>
     <div class="result">
         <div class="col-10 ml-3">
             <table class="table table-bordered">
