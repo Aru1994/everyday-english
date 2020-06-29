@@ -10,7 +10,7 @@
           <li><h6 class="t_b" ><a href="/wordquestion" class="btn-sticky">単語問題</a></h6></li>
           <li><h6 class="t_b"><a href="/conversationquestion" class="btn-sticky">会話型式問題</a></h6></li>
           <li><h6 class="t_b"><a href="/weaklist" class="btn-sticky">苦手リスト</a></h6></li>
-          <li><h6 class="t_b"><a href="totalqustion" class="btn-sticky">総合問題</a></h6></li>
+          <li><h6 class="t_b"><a href="totalquestion" class="btn-sticky">総合問題</a></h6></li>
         </ul>
       </div> 
       <div class="main-bottom">

@@ -42,4 +42,10 @@ Route::get('/totalresult', 'TotalresultController@index');
 
 Route::post('/conversationquestion/answer', 'ConversationquestionController@store');
 
+Route::post('/outputquestion/answer', 'OutputquestionController@store');
+
+Route::post('/totalquestion/answer', 'TotalquestionController@store');
+
+Route::post('/wordquestion/answer', 'WordquestionController@store');
+
 Route::get('/home', 'MypageController@index')->name('home');

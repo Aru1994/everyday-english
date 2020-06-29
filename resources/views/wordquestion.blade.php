@@ -5,12 +5,16 @@
     <div class="output">単語問題</div>
 
     <div class="container">
-        <div class="c-question">　disturb</div>
+    {!!$question->content!!}
     </div>
         <div class="select-answer">
-            <div class="selection"><a>を拡大する・を膨張させる</a></div>
-            <div class="selection"><a>進む・を進める</a></div>
-            <div class="selection"><a>の邪魔をする・を不安にする</a></div>
-            <div class="selection"><a>爆発する</a></div>
+          <form action="/wordquestion/answer" method="post">
+          @csrf
+            <input type="hidden" name="question_id" value="{{$question->id}}">
+              <div class="selection"><button type="submit" name="answer" value="1">1. {{$question->question_1}}</button></div>
+              <div class="selection"><button type="submit" name="answer" value="2">2. {{$question->question_2}}</button></div>
+              <div class="selection"><button type="submit" name="answer" value="3">3. {{$question->question_3}}</button></div>
+              <div class="selection"><button type="submit" name="answer" value="4">4. {{$question->question_4}}</button></div>
+          </form>
         </div>
 @endsection
