@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class TotalquestionController extends Controller
 {
     function index() {
-        $question = Question::where('type', '<=', 3)->inRandomOrder()->first();
+        $question = Question::inRandomOrder()->first();
         return view('totalquestion', compact('question'));
     }
 
