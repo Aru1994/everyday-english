@@ -11453,6 +11453,12 @@ footer ul li {
   }
 }
 
+.n-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5% 10% 10% 0;
+}
+
 .output {
   margin: 20px 0;
 }

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Input;
 use Illuminate\Http\Request;
 
 class InputquestionController extends Controller
 {
     function index() {
-        return view('inputquestion');
+        $input = Input::inRandomOrder()->first();
+        return view('inputquestion', compact('input'));
     }
 }
