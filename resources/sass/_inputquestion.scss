@@ -44,12 +44,6 @@
     cursor: pointer;
     color: cornsilk !important;
 }
-@media (max-width:670px) {
-    .next {
-        position: absolute;
-        bottom: 30px;
-    }
-}
 .n-button {
     display: flex;
     justify-content: flex-end;

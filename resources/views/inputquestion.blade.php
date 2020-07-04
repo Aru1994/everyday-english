@@ -20,5 +20,4 @@
         </div>
         <div class="n-button"><a class="next">次へ</a></div>
     </div>
-    </div>
 @endsection

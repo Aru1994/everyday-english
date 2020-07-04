@@ -15,37 +15,39 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'TopController@index');
 
-Route::get('/top', 'TopController@index');
 Auth::routes();
 
-Route::get('/mypage', 'MypageController@index');
+Route::middleware(['auth'])->group(function(){
+    // ホーム画面
+    Route::get('/home', 'MypageController@index')->name('home');
 
-Route::get('/inputquestion', 'InputquestionController@index');
+    // マイページ
+    Route::get('/mypage', 'MypageController@index');
 
-Route::get('/outputquestion', 'OutputquestionController@index');
+    // 会話形式問題
+    Route::get('/conversation/result', 'ConversationController@result');
+    Route::get('/conversation/question', 'ConversationController@question');
+    Route::post('/conversation/answer', 'ConversationController@answer');
 
-Route::get('/wordquestion', 'WordquestionController@index');
+    Route::get('/inputquestion', 'InputquestionController@index');
 
-Route::get('/conversationquestion', 'ConversationquestionController@index');
+    Route::get('/outputquestion', 'OutputquestionController@index');
 
-Route::get('/totalquestion', 'TotalquestionController@index');
+    Route::get('/wordquestion', 'WordquestionController@index');
 
-Route::get('/weaklist', 'WeaklistController@index');
+    Route::get('/totalquestion', 'TotalquestionController@index');
 
-Route::get('/outputresult', 'OutputresultController@index');
+    Route::get('/weaklist', 'WeaklistController@index');
 
-Route::get('/wordresult', 'WordresultController@index');
+    Route::get('/outputresult', 'OutputresultController@index');
 
-Route::get('/conversationresult', 'ConversationresultController@index');
+    Route::get('/wordresult', 'WordresultController@index');
 
-Route::get('/totalresult', 'TotalresultController@index');
+    Route::get('/totalresult', 'TotalresultController@index');
 
-Route::post('/conversationquestion/answer', 'ConversationquestionController@store');
+    Route::post('/outputquestion/answer', 'OutputquestionController@store');
 
-Route::post('/outputquestion/answer', 'OutputquestionController@store');
+    Route::post('/totalquestion/answer', 'TotalquestionController@store');
 
-Route::post('/totalquestion/answer', 'TotalquestionController@store');
-
-Route::post('/wordquestion/answer', 'WordquestionController@store');
-
-Route::get('/home', 'MypageController@index')->name('home');
+    Route::post('/wordquestion/answer', 'WordquestionController@store');
+});
