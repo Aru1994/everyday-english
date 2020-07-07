@@ -4,7 +4,7 @@
 
     <div class="output">単語問題</div>
 
-    <div class="m-question">
+    <div class="w-question">
       <div class="b-question">{{$page}}.</div>
       {!!$question->content!!}
     </div>
