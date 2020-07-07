@@ -61,5 +61,6 @@
             </table>
         </div>
     </div>
+    <div class="n-button"><a class="next" href="/mypage">トップへ戻る</a></div>
 </main>
  @endsection

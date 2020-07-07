@@ -30,7 +30,8 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/conversation/answer', 'ConversationController@answer');
 
     //インプット形式問題
-    Route::get('/input', 'InputController@index');
+    Route::get('/input', 'InputController@question');
+    Route::get('/input/end', 'InputController@end');
 
     //アウトプット形式問題
     Route::get('/output/question', 'OutputController@question');
