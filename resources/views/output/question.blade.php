@@ -3,12 +3,13 @@
 @section('content')
 
     <div class="output">アウトプット型式問題</div>
-
-    <div class="container">
-    {!!$question->content!!}
+    
+    <div class="m-question">
+        <div class="b-question">{{$page}}.</div>
+        {!!$question->content!!}
     </div>
         <div class="select-answer">
-            <form action="/outputquestion/answer" method="post">
+            <form action="/output/answer" method="post">
             @csrf
                 <input type="hidden" name="question_id" value="{{$question->id}}">
                 <div class="selection"><button type="submit" name="answer" value="1">1. {{$question->question_1}}</button></div>

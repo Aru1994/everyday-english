@@ -11401,7 +11401,8 @@ footer ul li {
 }
 
 .m-question {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .c-question {
@@ -11415,7 +11416,7 @@ footer ul li {
   font-size: 20px;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 10%;
 }
 
 .m-example {
@@ -11454,12 +11455,16 @@ footer ul li {
 }
 
 .output {
-  margin: 20px 0;
+  margin: 10% 0;
 }
 
 .container {
   width: 100%;
   margin: 0 auto;
+}
+
+.b-question {
+  margin-top: 0;
 }
 
 .output {

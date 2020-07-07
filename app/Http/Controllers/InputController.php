@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Input;
 use Illuminate\Http\Request;
 
-class InputquestionController extends Controller
+class InputController extends Controller
 {
     function index() {
         $input = Input::inRandomOrder()->first();
-        return view('inputquestion', compact('input'));
+        return view('input', compact('input'));
     }
 }

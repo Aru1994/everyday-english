@@ -25,29 +25,29 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/mypage', 'MypageController@index');
 
     // 会話形式問題
-    Route::get('/conversation/result', 'ConversationController@result');
     Route::get('/conversation/question', 'ConversationController@question');
+    Route::get('/conversation/result', 'ConversationController@result');
     Route::post('/conversation/answer', 'ConversationController@answer');
 
-    Route::get('/inputquestion', 'InputquestionController@index');
+    //インプット形式問題
+    Route::get('/input', 'InputController@index');
 
-    Route::get('/outputquestion', 'OutputquestionController@index');
+    //アウトプット形式問題
+    Route::get('/output/question', 'OutputController@question');
+    Route::get('/output/result', 'OutputController@result');
+    Route::post('/output/answer', 'OutputController@answer');
 
-    Route::get('/wordquestion', 'WordquestionController@index');
+    //単語形式問題
+    Route::get('/word/question', 'WordController@question');
+    Route::get('/word/result', 'WordController@result');
+    Route::post('/word/answer', 'WordController@answer');
 
-    Route::get('/totalquestion', 'TotalquestionController@index');
+    //総合問題
+    Route::get('/total/question', 'TotalController@question');
+    Route::get('/total/result', 'TotalController@result');
+    Route::post('/total/answer', 'TotalController@answer');
 
+    //苦手リスト
     Route::get('/weaklist', 'WeaklistController@index');
 
-    Route::get('/outputresult', 'OutputresultController@index');
-
-    Route::get('/wordresult', 'WordresultController@index');
-
-    Route::get('/totalresult', 'TotalresultController@index');
-
-    Route::post('/outputquestion/answer', 'OutputquestionController@store');
-
-    Route::post('/totalquestion/answer', 'TotalquestionController@store');
-
-    Route::post('/wordquestion/answer', 'WordquestionController@store');
 });
