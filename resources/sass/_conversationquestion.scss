@@ -20,15 +20,14 @@
 }
 .select-answer {
     width: 60%;
-    margin: 30px auto;
+    margin: 10% auto;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10%;
 }
 .selection {
-    width: 50%;
     font-size: 20px;
-    margin-top: 20px;
+    margin: 5% 0;
 }
 .selection a:hover {
     color: cornflowerblue;
@@ -38,4 +37,5 @@
     border: none;
     color: cornflowerblue;
     outline: none;
+    background-color: transparent;
 }

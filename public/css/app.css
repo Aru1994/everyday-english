@@ -11477,21 +11477,28 @@ footer ul li {
 }
 
 .select-answer {
-  width: 400px;
-  margin: 30px auto;
+  width: 60%;
+  margin: 10% auto;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 10%;
 }
 
 .selection {
-  width: 200px;
-  font-size: 25px;
-  margin-top: 20px;
+  font-size: 20px;
+  margin: 5% 0;
 }
 
 .selection a:hover {
   color: cornflowerblue;
   cursor: pointer;
+}
+
+.selection button {
+  border: none;
+  color: cornflowerblue;
+  outline: none;
+  background-color: transparent;
 }
 
 .conversation {
@@ -11518,16 +11525,15 @@ footer ul li {
 
 .select-answer {
   width: 60%;
-  margin: 30px auto;
+  margin: 10% auto;
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 10%;
 }
 
 .selection {
-  width: 50%;
   font-size: 20px;
-  margin-top: 20px;
+  margin: 5% 0;
 }
 
 .selection a:hover {
@@ -11539,6 +11545,7 @@ footer ul li {
   border: none;
   color: cornflowerblue;
   outline: none;
+  background-color: transparent;
 }
 
 .total {

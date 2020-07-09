@@ -8,7 +8,7 @@
     {!!$question->content!!}
   </div>
   <div class="select-answer">
-    <form action="/conversation/answer" method="post">
+    <form action="/conversation/answer" method="post" style="width:100%;">
     @csrf<!--クロス・サイト・リクエスト・フォージェリ-->
         <input type="hidden" name="question_id" value="{{$question->id}}"><!--hiddenタグは検証ツールで見える、ユーザーidには使えない-->
         <input type="hidden" name="page" value="{{$page}}"><!--ページを渡す-->
