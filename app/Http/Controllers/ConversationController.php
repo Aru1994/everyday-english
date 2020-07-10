@@ -64,4 +64,8 @@ class ConversationController extends Controller
     function result() {
       return view('conversation/result');
   }
+
+  function select() {
+      WrongAnswer::select(['questions.content', 'questions.answer'])->join('questions', 'wrong_answers.question_id', '=', 'questions.id')->get();
+  }
 }

@@ -60,4 +60,8 @@ class WordController extends Controller
     function result() {
         return view('word/result');
     }
+
+    function select() {
+        WrongAnswer::select(['questions.content', 'questions.answer'])->join('questions', 'wrong_answers.question_id', '=', 'questions.id')->get();
+    }  
 }

@@ -1,31 +1,6 @@
 body{
     margin: 0;
 }
-.logout:hover {
-  color: yellow;
-  text-decoration: none;
-}
-.logout {
-  display: inline-block;
-  position: relative;
-  transition: 0.3s;
-  color: white;
-  text-decoration: none;
-}
-.logout::after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background: yellow;
-  content: "";
-  transition: 0.3s;
-  transform: translateX(-50%);
-}
-.logout:hover::after {
-  width: 100%;
-}
 .p-main {
 //   display: flex;
 }
@@ -122,7 +97,7 @@ main h1 {
 .question {
   height: 300px;
   width: 450px;
-  border: solid 2px #EC407A;
+  border: solid 2px rgb(142, 242, 255);
   border-radius: 50px;
   text-align: center;
   margin-left: 30px;
@@ -131,36 +106,33 @@ main h1 {
 }
 .question p {
   font-size: 20px;
-  font-family: serif;
-  color: #EC407A;
+  color: rgb(9, 192, 216);
 }
 .labelText {
-  font-family:serif;
-  color: #EC407A;
+  color: rgb(9, 192, 216);
 }
 .textContent {
-  margin-left: 75px;
+  margin-left: 60px;
 }
 .formSquare {
-  border: 2px solid #EC407A;
+  border: 2px solid rgb(142, 242, 255);
   border-radius: 3px;
-  color: #EC407A;
+  color: rgb(12, 210, 236);
 }
 .textSubmit {
-  font-family: serif;
   margin-left: 230px;
 	padding-right: 0.8em;
   padding-left: 0.8em;
 	text-align: center;
 	text-decoration: none;
-	color: #EC407A;
+	color: rgb(9, 192, 216);
   background-color: #fff;
-	border: 2px solid #EC407A;
+	border: 2px solid rgb(142, 242, 255);
 	border-radius: 3px;
 	transition: .4s;
 }
 .textSubmit:hover {
-	background: #EC407A;
+	background: rgb(9, 192, 216);
 	color: #fff;
 }
 @media (max-width:670px) {

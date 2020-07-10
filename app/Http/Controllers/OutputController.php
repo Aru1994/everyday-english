@@ -57,4 +57,8 @@ class OutputController extends Controller
     function result() {
         return view('output/result');
     }
+
+    function select() {
+        WrongAnswer::select(['questions.content', 'questions.answer'])->join('questions', 'wrong_answers.question_id', '=', 'questions.id')->get();
+    }  
 }
