@@ -14,16 +14,6 @@
         </ul>
       </div> 
       <div class="main-bottom">
-        <form class="question" action="confirm.php" method="post">
-          <p>お問い合わせフォーム</p>
-          <label class="labelText">Mail Address:</label>
-          <input type="text" name="mailAddress" value="*****@xxx.xxx" class="formSquare"><br>
-          <div class="textContent">
-            <label class="labelText" style="vertical-align:top;">Text:</label>
-            <textarea name="text" rows="3" cols="20" class="formSquare"></textarea><br>
-          </div>
-          <input type="submit" name="submit" value="送信" class="textSubmit">
-        </form>
     <!-- progateみたいなカレンダー -->
         <div class="calender">
           <p>学習カレンダー</p>

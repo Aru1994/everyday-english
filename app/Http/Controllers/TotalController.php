@@ -25,9 +25,9 @@ class TotalController extends Controller
             'answer' => $request->answer,
         ]);
         $question = Question::where('id', '=', $request->question_id)->first();
-        if ($question->answer !== $request->answer) {
+        if ($question->answer !== $request->answer && $question->type !== 2) {
             //以下wronganswerテーブルに保存する処理
-            WrongAnswer::create([
+            WrongAnswer::updateOrCreate([
                 'user_id' => \Auth::id(),
                 'question_id' => $request->question_id,
             ]);
@@ -46,10 +46,13 @@ class TotalController extends Controller
     }
 
     function result() {
+        
+        function select() {
+            WrongAnswer::select(['questions.content', 'questions.answer'])
+            ->join('questions', 'wrong_answers.question_id', '=', 'questions.id')
+            ->get();
+        }  
         return view('total/result');
     }
 
-    function select() {
-        WrongAnswer::select(['questions.content', 'questions.answer'])->join('questions', 'wrong_answers.question_id', '=', 'questions.id')->get();
-    }  
 }

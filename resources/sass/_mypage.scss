@@ -37,7 +37,7 @@ main h1 {
   }
 }
 .mainList {
-  margin: 130px auto;
+  margin: 20% auto;
   list-style: none;
   width: 60%;
   padding: 0;
@@ -242,10 +242,10 @@ main h1 {
   display: inline-block;
 }
 .main-bottom {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: center;
-  margin-bottom: 10%;
+  margin: 10% auto;
 }
 
 @media (max-width:670px) {

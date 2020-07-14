@@ -4,7 +4,7 @@
     <div class="input">インプット型式問題</div>
 
     <div class="m-question">
-        <div class="c-question">1. {{$input->content}}</div>
+        <div class="c-question">{{$input->content}}</div>
         <div class="m-answer">意味：{{$input->meaning}}</div>
         <div class="m-example">
             <div class="c-example">
@@ -18,6 +18,12 @@
                 <p class="ja-answer">{{$input->example_jp_2}}</p>
             </div>
         </div>
-        <div class="n-button"><a class="next">次へ</a></div>
+        <form class="n-button" action="/input" method="post">
+            @csrf
+            <input type="hidden" name="page">
+            <button class="next" type="submit" name="next_page">
+                次へ
+            </button>
+        </form>
     </div>
 @endsection

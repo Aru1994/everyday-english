@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 // 以下モデルの読み込み(use)
 use App\Question;
 use App\AnswerHistory;
-use App\WrongAnswer;
 use Illuminate\Http\Request;
 
 /**
@@ -34,13 +33,6 @@ class ConversationController extends Controller
             'answer' => $request->answer,//どの答えが選択されたか
         ]);
         $question = Question::where('id', '=', $request->question_id)->first();
-        if ($question->answer !== $request->answer) {
-            //以下wronganswerテーブルに保存する処理
-            WrongAnswer::create([
-                'user_id' => \Auth::id(),//どのユーザーが行っているか
-                'question_id' => $request->question_id,//どの問題が選択出題されたか
-            ]);
-        }
 
         // 現在のページを取得
         $current_page = $request->page;
@@ -62,10 +54,13 @@ class ConversationController extends Controller
      * 結果を表示する処理
      */
     function result() {
-      return view('conversation/result');
+        //取得してから表示だから、取得内容を先に書く！変数は複数形にしたほうがわかりやすい
+        $answer_histories = AnswerHistory::select(['answer_histories.answer', 'questions.content','questions.answer as correct'])
+        ->join('questions', 'answer_histories.question_id', '=', 'questions.id')
+        ->where('answer_histories.user_id', '=', \Auth::id())
+        ->get();
+
+      return view('conversation/result', compact('answer_histories'));
   }
 
-  function select() {
-      WrongAnswer::select(['questions.content', 'questions.answer'])->join('questions', 'wrong_answers.question_id', '=', 'questions.id')->get();
-  }
 }

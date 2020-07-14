@@ -33,7 +33,7 @@ class WordController extends Controller
         $question = Question::where('id', '=', $request->question_id)->first();
         if ($question->answer !== $request->answer) {
             //以下wronganswerテーブルに保存する処理
-            WrongAnswer::create([
+            WrongAnswer::updateOrCreate([
                 'user_id' => \Auth::id(),
                 'question_id' => $request->question_id,
                 ]);
@@ -58,10 +58,13 @@ class WordController extends Controller
      * 結果を表示する処理
      */
     function result() {
+
+        function select() {
+            WrongAnswer::select(['questions.content', 'questions.answer'])
+            ->join('questions', 'wrong_answers.question_id', '=', 'questions.id')
+            ->get();
+        }  
         return view('word/result');
     }
 
-    function select() {
-        WrongAnswer::select(['questions.content', 'questions.answer'])->join('questions', 'wrong_answers.question_id', '=', 'questions.id')->get();
-    }  
 }

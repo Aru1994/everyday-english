@@ -8,45 +8,15 @@
             <table class="table table-bordered">
                 <tbody>
                     <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
+                        <th>問題</th>
+                        <th>答え</th>
                     </tr>
+                    @foreach ($wrong_answers as $wrong_answer)
                     <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
+                        <td>{{$wrong_answer['content']}}</td>
+                        <td>{{$wrong_answer['question_' . $wrong_answer->answer]}}</td>
                     </tr>
-                    <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
-                    </tr>
-                    <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
-                    </tr>
-                    <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
-                    </tr>
-                    <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
-                    </tr>
-                    <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
-                    </tr>
-                    <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
-                    </tr>
-                    <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
-                    </tr>
-                    <tr>
-                        <td>stay away (from)</td>
-                        <td>(〜から)離れている、(〜に)近寄らない</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

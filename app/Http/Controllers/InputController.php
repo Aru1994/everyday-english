@@ -12,11 +12,11 @@ class InputController extends Controller
         $page = $request->session()->get('page', 1);
 
         $input = Input::inRandomOrder()->first();
-        return view('input', compact('input'));
+        return view('input/input', compact('input'));
     }
 
 
     function end() {
-        return view('input/end');
+        return view('/input/end');
     }
 }

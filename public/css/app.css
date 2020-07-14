@@ -11064,7 +11064,7 @@ main h1 {
 }
 
 .mainList {
-  margin: 130px auto;
+  margin: 20% auto;
   list-style: none;
   width: 60%;
   padding: 0;
@@ -11307,10 +11307,10 @@ main h1 {
 }
 
 .main-bottom {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: center;
-  margin-bottom: 10%;
+  margin: 10% auto;
 }
 
 @media (max-width: 670px) {
@@ -11365,7 +11365,8 @@ footer ul li {
 .input {
   font-size: 25px;
   color: gray;
-  margin-left: 30px;
+  margin-top: 3%;
+  margin-left: 3%;
 }
 
 .m-question {
@@ -11420,6 +11421,21 @@ footer ul li {
   display: flex;
   justify-content: flex-end;
   margin: 5% 10% 10% 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.goodJob {
+  width: 60%;
+  margin: 20% auto;
+  font-size: 3em;
+  text-align: center;
 }
 
 .output {
@@ -11557,7 +11573,7 @@ footer ul li {
 
 .result {
   width: 60%;
-  margin: 0 auto;
+  margin: 10% auto;
 }
 
 .conversation {

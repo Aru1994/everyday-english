@@ -1,7 +1,8 @@
 .input {
     font-size: 25px;
     color: gray;
-    margin-left: 30px;
+    margin-top: 3%;
+    margin-left: 3%;
 }
 
 .m-question {
@@ -49,4 +50,11 @@
     display: flex;
     justify-content: flex-end;
     margin: 5% 10% 10% 0;
+}
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
 }
