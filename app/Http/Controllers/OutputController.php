@@ -56,12 +56,16 @@ class OutputController extends Controller
      */
     function result() {
 
-        function select() {
-            WrongAnswer::select(['questions.content', 'questions.answer'])
-            ->join('questions', 'wrong_answers.question_id', '=', 'questions.id')
-            ->get();
-        }  
-        return view('output/result');
+        //取得してから表示だから、取得内容を先に書く！変数は複数形にしたほうがわかりやすい
+        $answer_histories = AnswerHistory::select(['answer_histories.answer', 'questions.content','questions.answer as correct', 'questions.type'])
+        ->join('questions', 'answer_histories.question_id', '=', 'questions.id')
+        ->where('answer_histories.user_id', '=', \Auth::id())
+        ->where('questions.type', '=', 1)
+        ->orderBy('answer_histories.answer', 'DESC')
+        ->take(10)
+        ->get();
+
+        return view('output/result', compact('answer_histories'));
     }
 
 }

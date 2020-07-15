@@ -7,56 +7,18 @@
         <div class="col-10 ml-3">
             <table class="table table-bordered">
                 <tbody>
-                    <tr>
-                        <td>1.</td>
-                        <td>stay away (from)</td>
-                        <td>○</td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>stay away (from)</td>
-                        <td>○</td>
-                    </tr>
-                    <tr>
-                        <td>3.</td>
-                        <td>stay away (from)</td>
-                        <td>○</td>
-                    </tr>
-                    <tr>
-                        <td>4.</td>
-                        <td>stay away (from)</td>
-                        <td>×</td>
-                    </tr>
-                    <tr>
-                        <td>5.</td>
-                        <td>stay away (from)</td>
-                        <td>×</td>
-                    </tr>
-                    <tr>
-                        <td>6.</td>
-                        <td>stay away (from)</td>
-                        <td>○</td>
-                    </tr>
-                    <tr>
-                        <td>7.</td>
-                        <td>stay away (from)</td>
-                        <td>○</td>
-                    </tr>
-                    <tr>
-                        <td>8.</td>
-                        <td>stay away (from)</td>
-                        <td>×</td>
-                    </tr>
-                    <tr>
-                        <td>9.</td>
-                        <td>stay away (from)</td>
-                        <td>○</td>
-                    </tr>
-                    <tr>
-                        <td>10.</td>
-                        <td>stay away (from)</td>
-                        <td>○</td>
-                    </tr>
+                    @foreach ($answer_histories as $answer_history)
+                        <tr>
+                            <td>{{$answer_history->content}}</td>
+                            <td>
+                                @if ($answer_history->answer == $answer_history->correct)
+                                <div>○</div>                        
+                                @else
+                                <div>×</div>
+                                @endif
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
