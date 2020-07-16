@@ -8,24 +8,23 @@
             <table class="table table-bordered">
                 <tbody>
                     @foreach ($answer_histories as $answer_history)
-                        
-                    @endforeach
-                    <tr>
-                        <td>
-                            @if ($answer_history->type == 2)
+                        <tr>
+                            <td>
+                                @if ($answer_history->type == 2)
                                 {!!$answer_history->content!!}
-                            @else
+                                @else
                                 {{$answer_history->content}}
-                            @endif
-                        </td>
-                        <td>
-                            @if ($answer_history->answer == $answer_history->correct)
+                                @endif
+                            </td>
+                            <td>
+                                @if ($answer_history->answer == $answer_history->correct)
                                 <div>○</div>
-                            @else
+                                @else
                                 <div>×</div>
-                            @endif
-                        </td>
-                    </tr>
+                                @endif
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

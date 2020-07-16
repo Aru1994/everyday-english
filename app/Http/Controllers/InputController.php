@@ -13,10 +13,16 @@ class InputController extends Controller
 
         $input = Input::inRandomOrder()->first();
         return view('input/input', compact('input'));
+        
     }
 
 
     function end() {
-        return view('/input/end');
+        // 現在のページを取得
+        $current_page = $request->page;
+        if ($current_page == 10) {
+            //結果ページを表示する
+            return redirect('/input/end', compact('input'));
+        }
     }
 }
