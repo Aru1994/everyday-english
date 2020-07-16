@@ -46,13 +46,13 @@ class TotalController extends Controller
     }
 
     function result() {
-        $answer_histories = AnswerHistory::select(['answer_histories.answer', 'questions.content', 'questions.answer as correct'])
+        $answer_histories = AnswerHistory::select(['answer_histories.id', 'answer_histories.answer', 'questions.content', 'questions.answer as correct'])
             ->join('questions', 'answer_histories.question_id', '=', 'questions.id')
             ->where('answer_histories.user_id', '=', \Auth::id())
-            ->orderBy('answer_histories.question_id', 'DESC')
+            ->orderBy('answer_histories.id', 'DESC')
             ->take(10)
-            ->get();
-        dd($answer_histories);
+            ->get()
+            ->sortBy('id');
         return view('total/result', compact('answer_histories'));
     }
 }
