@@ -18,9 +18,9 @@
                 <p class="ja-answer">{{$input->example_jp_2}}</p>
             </div>
         </div>
-        <form class="n-button" action="/input" method="post">
+        <form class="n-button" action="/input/end" method="post">
             @csrf
-            <input type="hidden" name="page">
+            <input type="hidden" name="page" value="{{$page}}">
             <button class="next" type="submit" name="next_page">
                 次へ
             </button>

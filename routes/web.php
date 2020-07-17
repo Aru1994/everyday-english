@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function(){
 
     //インプット形式問題
     Route::get('/input', 'InputController@question');
-    Route::post('/input', 'InputController@question');
+    Route::post('/input/end', 'InputController@end');
     Route::get('/input/end', 'InputController@end');
 
     //アウトプット形式問題

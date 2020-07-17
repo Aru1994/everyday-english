@@ -55,14 +55,13 @@ class ConversationController extends Controller
      */
     function result() {
         //取得してから表示だから、取得内容を先に書く！変数は複数形にしたほうがわかりやすい
-        $answer_histories = AnswerHistory::select(['answer_histories.answer', 'questions.content','questions.answer as correct', 'questions.type'])
+        $answer_histories = AnswerHistory::select(['answer_histories.id', 'answer_histories.answer', 'questions.content','questions.answer as correct', 'questions.type'])
         ->join('questions', 'answer_histories.question_id', '=', 'questions.id')
         ->where('answer_histories.user_id', '=', \Auth::id())
-        ->where('questions.type', '=', 2)
-        ->orderBy('answer_histories.question_id', 'DESC')
+        ->orderBy('answer_histories.id', 'DESC')
         ->take(10)
-        ->get();
-
+        ->get()
+        ->sortBy('id');
 
       return view('conversation/result', compact('answer_histories'));
   }

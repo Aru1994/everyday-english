@@ -58,13 +58,14 @@ class WordController extends Controller
      * 結果を表示する処理
      */
     function result() {
-        $answer_histories = AnswerHistory::select(['answer_histories.answer', 'questions.content', 'questions.answer as correct', 'questions.type'])
+        $answer_histories = AnswerHistory::select(['answer_histories.id', 'answer_histories.answer', 'questions.content', 'questions.answer as correct', 'questions.type'])
         ->join('questions', 'answer_histories.question_id', '=', 'questions.id')
         ->where('answer_histories.user_id', '=', \Auth::id())
-        ->where('questions.type', '=', 3)
-        ->orderBy('answer_histories.question_id', 'DESC')
+        ->orderBy('answer_histories.id', 'DESC')
         ->take(10)
-        ->get();
+        ->get()
+        ->sortBy('id');
+
         return view('word/result', compact('answer_histories'));
     }
 
