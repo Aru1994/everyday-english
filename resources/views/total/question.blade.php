@@ -6,11 +6,7 @@
 
     <div class="m-question">
       <div class="b-question">{{$page}}.</div>
-      @if ($question->type == 2)
-      {!!$question->content!!}
-      @else
-      <div class="b-question">{{$question->content}}</div>
-      @endif
+      <div class="b-question">{!!$question->content!!}</div>
     </div>
           <div class="select-answer">
             <form action="/total/answer" method="post">

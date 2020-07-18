@@ -8,14 +8,14 @@
 }
 
 .q-space {
+    display: inline-block;
     width: 15%;
-    height: 30px;
+    height: 1rem;
     background-color: lightgray;
     margin: 10px 5px 0 7px;
 }
 .b-question {
     font-size: 1.8rem;
-    display: flex;
     text-align: left;
 }
 .select-answer {
