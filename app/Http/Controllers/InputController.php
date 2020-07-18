@@ -23,13 +23,18 @@ class InputController extends Controller
         $current_page = $request->page;
         if ($current_page == 10) {
             //結果ページはいらないから、トップページに戻す
-            return redirect('/input/end');
+            // ここのredirectで飛ばしたい先を指定する
+            return redirect('/input/finish');
         }
         // 次のページを取得
         $next_page = $current_page + 1;
         // dd($next_page);
         // 次のリクエストまで有効なセッションを作成(ページ数を覚えさせる)
         $request->session()->flash('page', $next_page);
+        return redirect('/input');
+    }
+
+    function finish() {
         return view('/input/end');
     }
 }

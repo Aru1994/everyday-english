@@ -9,7 +9,7 @@
                 <tbody>
                     @foreach ($answer_histories as $answer_history)
                     <tr>
-                        <td>{!!$answer_history->content!!}</td>
+                        <td style="font-size: 0.9rem">{!!$answer_history->content!!}</td>
                         <td>{{$answer_history['correct']}}</td>
                         <td>
                             @if ($answer_history->answer == $answer_history->correct)

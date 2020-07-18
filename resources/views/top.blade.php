@@ -18,6 +18,7 @@
             <li class="imgList"><img class="images" src="{{ asset('images/inputquestion.png') }}" alt="inputquestion"></li>
             <li class="imgList"><img class="images" src="{{ asset('images/outputquestion.png') }}" alt="outputquestion"></li>
             <li class="imgList"><img class="images" src="{{ asset('images/conversationquestion.png') }}" alt="conversationquestion"></li>
+            <li class="imgList"><img class="images" src="{{ asset('images/weaklist.png') }}" alt="conversationquestion"></li>
           </ul>
         </div>
       </div>

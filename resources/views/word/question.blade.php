@@ -6,7 +6,7 @@
 
     <div class="w-question">
       <div class="b-question">{{$page}}.</div>
-      {!!$question->content!!}
+      <div class="b-question">{!!$question->content!!}</div>
     </div>
         <div class="select-answer">
           <form action="/word/answer" method="post">

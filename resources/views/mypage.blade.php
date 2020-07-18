@@ -17,7 +17,7 @@
     <!-- progateみたいなカレンダー -->
         <div class="calender">
           <p>学習カレンダー</p>
-          <div class="month">6月</div>
+          <div class="month">7月</div>
           <div style="display: inline-block;">
             <div class="week">
               <div class="date">日</div>

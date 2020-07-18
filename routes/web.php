@@ -32,7 +32,7 @@ Route::middleware(['auth'])->group(function(){
     //インプット形式問題
     Route::get('/input', 'InputController@question');
     Route::post('/input/end', 'InputController@end');
-    Route::get('/input/end', 'InputController@end');
+    Route::get('/input/finish', 'InputController@finish');
 
     //アウトプット形式問題
     Route::get('/output/question', 'OutputController@question');

@@ -8,13 +8,13 @@
 }
 
 .q-space {
-    width: 150px;
+    width: 15%;
     height: 30px;
     background-color: lightgray;
     margin: 10px 5px 0 7px;
 }
 .b-question {
-    font-size: 30px;
+    font-size: 1.8rem;
     display: flex;
     text-align: left;
 }
@@ -29,13 +29,13 @@
     font-size: 20px;
     margin: 5% 0;
 }
-.selection a:hover {
+.selection button:hover {
     color: cornflowerblue;
     cursor: pointer;
 }
 .selection button {
     border: none;
-    color: cornflowerblue;
+    color: currentColor;
     outline: none;
     background-color: transparent;
 }
